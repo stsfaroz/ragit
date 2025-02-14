@@ -2,7 +2,12 @@
 # Ragit
 🚀 Smart, Fast, Scalable Search 🚀
 
-**ragit** is a lightweight Python library that simplifies the management of vector databases. With ragit, you can easily create, update, query, and manage your vector database, all from CSV files containing text data.
+## Installation
+```
+pip install ragit
+```
+
+**ragit** is a lightweight Python library that simplifies the management of vector databases. With **ragit**, you can easily create, update, query, and manage your vector database, all from CSV files containing text data.
 
 ## Features
 
@@ -13,7 +18,7 @@
 - **Deletion:** Remove single entries or entire collections when needed.
 
 ## CSV File Format
-ragit expects your CSV file to have exactly two columns: `id` and `text`.
+ragit expects your CSV file to have exactly two columns: `id` and `text`.  **Note:** Each `id` must be unique.
 
 ## Example CSV (`data.csv`):
 
@@ -52,7 +57,7 @@ db_manager.create_database(
 ```
 ### Reloading Your Database
 
-After creating and populating your vector database, simply load it later by reinitializing with the same persistence directory:
+Once your database is created and your data is added, simply load it for later use by specifying the same folder:
 
 ```python
 from ragit import VectorDBManager
