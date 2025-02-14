@@ -1,4 +1,4 @@
-# ragit
+# Ragit
 
 **ragit** is a lightweight Python library that simplifies the management of vector databases using [ChromaDB](https://github.com/chroma-core/chroma) and [Sentence Transformers](https://www.sbert.net/). With ragit, you can easily create, update, query, and manage your vector database—all from CSV files containing text data.
 
