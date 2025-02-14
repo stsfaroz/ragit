@@ -1,4 +1,5 @@
 # Ragit
+🚀 Smart, Fast, Scalable Search 🚀
 
 ## Installation
 
