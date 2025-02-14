@@ -1,6 +1,0 @@
-sentence-transformers>=3.4.1
-pandas>=2.2.3
-chromadb>=0.6.3
-setuptools>=75.8.0
-wheel>=0.45.1
-twine>=6.1.0
