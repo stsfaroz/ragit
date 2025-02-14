@@ -1,5 +1,13 @@
 # Ragit
 
+## Installation
+
+Install ragit from PyPI using pip:
+
+```bash
+pip install ragit
+```
+
 **ragit** is a lightweight Python library that simplifies the management of vector databases using [ChromaDB](https://github.com/chroma-core/chroma) and [Sentence Transformers](https://www.sbert.net/). With ragit, you can easily create, update, query, and manage your vector database—all from CSV files containing text data.
 
 ## Features
@@ -9,14 +17,6 @@
 - **Similarity Search:** Find nearby texts using various distance metrics (e.g., cosine, L2) with similarity scores.
 - **Data Retrieval:** Fetch entries by IDs or exact text matches.
 - **Deletion:** Remove single entries or entire collections when needed.
-
-## Installation
-
-Install ragit from PyPI using pip:
-
-```bash
-pip install ragit
-```
 
 ## CSV File Format
 ragit expects your CSV file to have exactly two columns: `id` and `text`.
