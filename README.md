@@ -1,15 +1,8 @@
+
 # Ragit
 🚀 Smart, Fast, Scalable Search 🚀
 
-## Installation
-
-Install ragit from PyPI using pip:
-
-```bash
-pip install ragit
-```
-
-**ragit** is a lightweight Python library that simplifies the management of vector databases using [ChromaDB](https://github.com/chroma-core/chroma) and [Sentence Transformers](https://www.sbert.net/). With ragit, you can easily create, update, query, and manage your vector database—all from CSV files containing text data.
+**ragit** is a lightweight Python library that simplifies the management of vector databases. With ragit, you can easily create, update, query, and manage your vector database—all from CSV files containing text data.
 
 ## Features
 
@@ -55,6 +48,17 @@ db_manager.create_database(
     csv_path="data.csv", 
     collection_name="my_collection",
     distance_metric="cosine" # Optional # default : l2
+)
+```
+### Reloading Your Database
+
+After creating and populating your vector database, simply load it later by reinitializing with the same persistence directory:
+
+```python
+from ragit import VectorDBManager
+
+db_manager = VectorDBManager(
+    persist_directory="./my_vector_db",
 )
 ```
 
