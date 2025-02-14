@@ -2,7 +2,7 @@
 # Ragit
 🚀 Smart, Fast, Scalable Search 🚀
 
-**ragit** is a lightweight Python library that simplifies the management of vector databases. With ragit, you can easily create, update, query, and manage your vector database—all from CSV files containing text data.
+**ragit** is a lightweight Python library that simplifies the management of vector databases. With ragit, you can easily create, update, query, and manage your vector database, all from CSV files containing text data.
 
 ## Features
 
