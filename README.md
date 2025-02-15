@@ -64,6 +64,8 @@ from ragit import VectorDBManager
 
 db_manager = VectorDBManager(
     persist_directory="./my_vector_db",
+    provider="sentence_transformer",
+    model_name="all-mpnet-base-v2"
 )
 ```
 
@@ -116,7 +118,17 @@ for item in results:
     print(f"Distance ({item['metric']}): {item['raw_distance']}")
 ```
 
-### 7. Deleting an Entry
+### 7. Fetching Texts by IDs
+Retrieve text entries for a list of IDs:
+
+```python
+ids_to_fetch = ["1", "2", "3"]
+texts = db_manager.get_by_ids(ids_to_fetch, "my_collection")
+print("Texts:", texts)
+```
+
+### 8. Deleting a Row / Collection
+
 Remove an entry from the collection by its ID:
 
 ```python
@@ -126,27 +138,7 @@ db_manager.delete_entry_by_id(
 )
 ```
 
-### 8. Fetching Texts by IDs
-Retrieve text entries for a list of IDs:
 
-```python
-ids_to_fetch = ["1", "2", "3"]
-texts = db_manager.get_by_ids(ids_to_fetch, "my_collection")
-print("Texts:", texts)
-```
-
-### 9. Fetching IDs by Texts
-For an exact text match, get the corresponding IDs:
-
-```python
-texts_to_fetch = [
-    "Plato was an ancient Greek philosopher of the Classical period who is considered a foundational thinker in Western philosophy"
-]
-ids = db_manager.get_by_texts(texts_to_fetch, "my_collection")
-print("IDs:", ids)
-```
-
-### 10. Deleting a Collection
 Delete an entire collection. **Note:** You must pass `confirmation="yes"` to proceed with deletion.
 
 ```python
