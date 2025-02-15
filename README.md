@@ -57,7 +57,7 @@ db_manager.create_database(
 ```
 ### Reloading Your Database
 
-Once your database is created and your data is added, simply load it for later use by specifying the same folder:
+To reuse your existing vector database, initialize VectorDBManager with the same parameters that were used when creating the database.
 
 ```python
 from ragit import VectorDBManager
